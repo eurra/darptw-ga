@@ -1,4 +1,4 @@
-# Genetic Algorithm (GA) for the DARPTW problema (C#)
+# Genetic Algorithm (GA) for the DARPTW problem (C#)
 
 This repo contains the source code that I developed for my undergraduate thesis work, in which several Genetic Algorithm implementations where applied for for solving the Dial-a-Ride Problem with Time Windows.
 
