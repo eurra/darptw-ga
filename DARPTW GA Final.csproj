@@ -1,0 +1,77 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4A1073F6-0401-45FB-8D63-EF0FCD04CF5C}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DARPTW_GA</RootNamespace>
+    <AssemblyName>final</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="dotnetCharting.WinForms, Version=4.3.2721.26775, Culture=neutral, PublicKeyToken=c3f34d622663b9f1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\net Charting\dotnetCharting.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DARP\Client.cs" />
+    <Compile Include="DARP\ClientMask.cs" />
+    <Compile Include="DARP\Clients.cs" />
+    <Compile Include="DARP\Event.cs" />
+    <Compile Include="DARP\GlobalParams.cs" />
+    <Compile Include="DARP\Locations.cs" />
+    <Compile Include="DARP\Route.cs" />
+    <Compile Include="DARP\ServiceRequest.cs" />
+    <Compile Include="Framework\Fenotype.cs" />
+    <Compile Include="Framework\Genomes\LLGAGenome.cs" />
+    <Compile Include="Framework\Genomes\RouteGenome.cs" />
+    <Compile Include="Framework\InitialPoblationMethods.cs" />
+    <Compile Include="Framework\Routing\RouteGeneration_backup.cs" />
+    <Compile Include="Framework\Routing\RouteGeneration.cs" />
+    <Compile Include="Framework\Routing\SolutionGeneration.cs" />
+    <Compile Include="Framework\TournamentSelection.cs" />
+    <Compile Include="GA Base\GA.cs" />
+    <Compile Include="GA Base\Genome.cs" />
+    <Compile Include="ManagedRunDefs.cs" />
+    <Compile Include="Misc\OperatorAttribute.cs" />
+    <Compile Include="Misc\RandomTool.cs" />
+    <Compile Include="Misc\TimeComparer.cs" />
+    <Compile Include="ParameterDefs.cs" />
+    <Compile Include="Parser\DARPReader.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
